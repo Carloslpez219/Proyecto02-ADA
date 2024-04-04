@@ -25,38 +25,3 @@ def tsp_divide_conquer(points):
 # Ejemplo de uso
 points = [(0, 0), (1, 2), (3, 4), (5, 1), (2, 3)]
 print("Distancia mínima recorrida:", tsp_divide_conquer(points))
-
-
-
-# def tsp_divide_conquer(cities):
-#     # Base case: if there's only one city, no travel needed
-#     if len(cities) == 1:
-#         return 0, cities
-    
-#     # Divide the cities into two roughly equal subsets
-#     mid_point = len(cities) // 2
-#     left_subset = cities[:mid_point]
-#     right_subset = cities[mid_point:]
-    
-#     # Conquer: Solve TSP for each subset recursively
-#     cost_left, path_left = tsp_divide_conquer(left_subset)
-#     cost_right, path_right = tsp_divide_conquer(right_subset)
-    
-#     # Combine: Find the best way to connect the two paths
-#     # This step is highly simplified and would need a more complex implementation
-#     # to properly merge the two paths with the minimal additional cost
-#     combined_cost, combined_path = connect_paths(path_left, path_right)
-    
-#     return combined_cost, combined_path
-
-# def connect_paths(path_left, path_right):
-#     # Placeholder function: in a real scenario, you would need to implement a way to
-#     # find the shortest path that connects the end of path_left to the start of path_right
-#     # and vice versa, then choose the one that minimizes the additional cost.
-#     # This might involve solving a smaller TSP instance for the connecting cities.
-#     return 0, path_left + path_right  # Simplified to just concatenate paths
-
-# # Example usage
-# cities = [(x, y) for x, y in enumerate(range(10))]  # Example set of cities as (x, y) tuples
-# total_cost, path = tsp_divide_conquer(cities)
-# print(f"Total cost: {total_cost}, Path: {path}")
